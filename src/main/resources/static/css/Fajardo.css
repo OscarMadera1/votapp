@@ -1,0 +1,326 @@
+@font-face {
+    font-family: Saira;
+    src: url('../Font/Saira-VariableFont_wdth\,wght.ttf');
+
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 100%;
+    font-family: Saira;
+}
+
+
+
+.Nav {
+    z-index: 3;
+    top: 0;
+    background-color: white;
+    position: sticky;
+    width: 100%;
+    border-bottom: 2px solid black;
+    font-weight: bold;
+}
+
+.Nav nav {
+    width: 95%;
+    
+}
+
+.Nav ul {
+    width: 100%;
+    margin: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    list-style: none;
+    
+}
+
+.logo {
+    width: 20%;
+    display: flex;
+    align-items: center;
+}
+
+.txtnavbar {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.txtnavbar:hover {
+    cursor: pointer;
+}
+
+.baner {
+    top: 0;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    background-image: url('/imagenes/guatape.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    z-index: 1;
+}
+
+.txtbaner {
+    margin: 10% 0 0 10%;
+    font-size: 150%;
+    color: rgb(254, 250, 250);
+    font-weight: bolder;
+    transition: 1s;
+}
+
+.txtbaner:hover {
+    transform: translateY(40%);
+}
+
+.logo img {
+    width: 40%;
+}
+
+.Rsocial {
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.Rsocial img {
+    width: 30px;
+    margin: 10px;
+}
+
+.contenmain {
+    width: 90%;
+    background-color: white;
+    z-index: 2;
+    margin-top: 40vh;
+    padding-bottom: 40px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.introduccion {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+
+.introduccion img {
+    margin: 50px 0 50px 0;
+    width: 70%;
+}
+
+.candidato {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;    
+    background-color: white;
+}
+
+.contcanditext {
+    width: 40%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.candidato p {
+    width: 80%;
+    margin: 0px;
+}
+
+.contcandiimg {
+    width: 60%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.contcandiimg img {
+    width: 80%;
+    border-radius: 30px;
+    box-shadow: 10px 5px 5px rgb(13, 240, 47);
+}
+
+.propuest {
+    background-color: white;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.propuesTitle {
+    width: 70%;
+}
+
+.propuesTitle h3 {
+    color: black;
+    text-align: center;
+    font-size: 150%;
+    margin-top: 50px;
+    text-shadow: 0 0 0.2em rgb(28, 240, 13), 0 0 0.2em rgb(240, 13, 108);
+}
+
+.propuestas {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.contprop {
+    width: 155px;
+    height: 300px;
+    margin: 30px;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+}
+
+.contprop h4 {
+    margin: 0px;
+}
+
+.contprop p {
+    margin: 0px;
+}
+
+.contprop img {
+    margin: 5%;
+    width: 80%;
+    border-radius: 10px;
+    box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.5);
+
+}
+
+.uno {
+    box-shadow: 10px 5px 5px #37ff00;
+    border-radius: 10px;
+    border: 1px solid #6aff00;
+    color: #51ff00;
+}
+
+.dos {
+    box-shadow: 10px 5px 5px #44ff00;
+    border-radius: 10px;
+    border: 1px solid #6fff00;
+    color: #1aff00;
+}
+
+.tres {
+    box-shadow: 10px 5px 5px #44ff00;
+    border-radius: 10px;
+    border: 1px solid #2bff00;
+    color: #37ff00;
+}
+
+.cuatro {
+    box-shadow: 10px 5px 5px #1BAD15;
+    border-radius: 10px;
+    border: 1px solid #1BAD15;
+    color: #1BAD15;
+}
+
+.cinco {
+    box-shadow: 10px 5px 5px #75ec13;
+    border-radius: 10px;
+    border: 1px solid #54ec13;
+    color: #2cec13;
+}
+
+.volver {
+    box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.5);
+    background-color: rgb(70, 240, 13);
+    border-radius: 10px;
+    width: 80px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 1s;
+}
+
+.volver p {
+    margin: 0px;
+    color: white;
+}
+
+.volver:hover {
+    transform: scale(120%, 120%);
+}
+
+.foot {
+    background-color: white;
+    z-index: 2;
+    width: 100%;
+    margin-top: 20px;
+    border-top: 2px solid black;
+    padding-bottom: 10px;
+}
+
+.foot footer {
+    width: 90%;
+    margin: 0px;
+}
+
+.foot ul {
+    width: 100%;
+    margin: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    list-style: none;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.text p {
+    font-size: 80%;
+    margin: 0px 3px 0 0;
+    font-weight: bolder;
+}
+
+.text h5 {
+    margin: 10px;
+}
+
+.divtext {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.gris {
+    color: rgb(56, 56, 56);
+}

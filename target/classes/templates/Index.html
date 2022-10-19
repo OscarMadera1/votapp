@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="/favicon.ico" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/myStyle.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/index.css}">
+    <link rel="stylesheet"  type="text/css" th:href="@{/css/bootstrap.min.css}" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@latest/dist/Chart.min.js"></script>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/Fajardo.css}">
+    <title>Votaciones</title>
+</head>
+<style>
+    #grafica {
+        width: 300px;
+        height: 300px;
+        padding: 1rem;
+        margin-left: 10%;
+        align-items: center;
+        text-align: center;
+    }
+
+    #estadistica {
+        width: 300px;
+        height: 300px;
+        padding: 1rem;
+        margin-left: 520px;
+        align-content: center;
+        margin-top: -500px;
+        text-align: center;
+        
+    }
+
+    #ganador {
+        width: 400px;
+    }
+</style>
+
+<body>
+    <header>
+        <section class="ini">
+            <figure class="fig-1">
+                <img class="ima1" src="/img/Petro/Pacto_Histórico.png" width="100">
+            </figure>
+            <h1 id="tit">
+                <font size="6"> Candidatos presidenciales de <br> la república de colombia <br> periodo 2022-2026
+                </font>
+            </h1>
+            <figure class="fig-2">
+                <img src="/img/Escudos/Escudo_registraduria.png" width="200">
+            </figure>
+        </section>
+    </header>
+    <main>
+        <div class="t-inicio">
+            <br>
+            <br>
+            <p align="justify" class="in-text">
+                <font size="5">
+                    La elección del presidente de la república se hace junto con la del vicepresidente, siendo
+                    este último su fórmula;
+                    la estadía en el cargo será de cuatro años sin posibilidad de reelección.
+                    Según la Constitución de Colombia, pueden ejercer su derecho a sufragio los ciudadanos
+                    mayores de 18 años de edad
+                    que no hagan parte de la Fuerza Pública, no estén en un proceso de interdicción y que no
+                    hayan sido condenados. A continuación,
+                    usted encontrará cuatro candidatos, pertenecientes a distintos partidos políticos, dé click
+                    al candidato de su elección
+                    para dirigirlo a la página del partido político de su candidato, con lo cual ejercerá su
+                    derecho constitucional a
+                    sufragio para las elecciones presidenciales nacionales del año 2022.
+                </font>
+            </p>
+        </div>
+        <section class="can-1">
+            <br>
+            <br>
+            <figure class="pe">
+                <img class="imgTarjetonCand" src="/img/Petro/Gustavo_Petro_T.jpg" width="300"> <br>
+                <figcaption class="t-can">Gustavo Petro</figcaption>
+                <p class="textce">
+                    Gustavo Francisco Petro Urrego es un político y economista colombiano. Fue senador de la
+                    república por el
+                    Polo Democrático Alternativo (PDA). Tras su salida del Polo Democrático, funda el Movimiento
+                    Progresistas (posteriormente Colombia Humana) con el que llegó a la alcaldía de Bogotá,
+                    gobernándola
+                    entre 2012 y 2015.
+                </p>
+                <a class="ico" target="_blank" href="/PetroCSS.html"><img
+                        src="/img/Petro/Pacto_Histórico.png" width="100"></a>
+                <br>
+                <input id="votar" class="btn btn-primary" type="button" value="Votar" onclick="javascrip:voto(0);">
+                
+            </figure>
+            <figure class="r">
+                <img class="imgTarjetonCand" src="/img/Rodolfo/Rodolfo_hernandez_T.jpg" width="300"> <br>
+                <figcaption class="t-can">Rodolfo Hernández</figcaption>
+                <p class="textce">
+                    Rodolfo Hernández Suárez es un ingeniero civil, empresario y político colombiano. Es líder del
+                    partido
+                    político Liga de Gobernantes Anticorrupción desde 2019. Fue alcalde de Bucaramanga entre 2016 y
+                    2019, cargo del cual renunció al ser suspendido previamente por propaganda política.
+                </p>
+                <a class="ico" target="_blank" href="/templates/Hernandez.html"> <img
+                        src="/img/Rodolfo/Liga_anticorrupcion.png" width="100"></a>
+                <br>
+                <input id="votar" class="btn btn-primary" type="button" value="Votar" onclick="javascrip:voto(1);">
+            </figure>
+        </section>
+        <br>
+        <br>
+        <br>
+        <section class="can-2">
+            
+            <figure class="fe">
+                <img class="imgTarjetonCand" src="/img/Federico/Federico_Gutiérrez_T.jpg" width="320"> <br>
+                <figcaption class="t-can">Federico Gutiérrez</figcaption>
+                <p class="textce">
+                    Federico Andrés Gutiérrez Zuluaga es un ingeniero civil, consultor de seguridad y político
+                    colombiano, líder de la coalición política Equipo por Colombia. Fue consultor en seguridad urbana en
+                    varios
+                    países de América del Sur, ejerció como concejal de Medellín, entre 2004 y 2012, y como alcalde de
+                    esa
+                    ciudad, entre 2016 y 2020.
+                </p>
+                <a class="ico" target="_blank" href="/templates/Federico.html"><img
+                        src="/img/Federico/Creemos_Colombia.png" width="100"></a>
+                <br>
+                <input id="votar" class="btn btn-primary" type="button" value="Votar" onclick="javascrip:voto(2);">
+            </figure>
+            <figure class="se">
+                <img class="imgTarjetonCand" src="/img/Fajardo/Sergio_fajardo_T.jpg" width="300"> <br>
+                <figcaption class="t-can">Sergio Fajardo</figcaption>
+                <p class="textce">
+                    Sergio Fajardo Valderrama es un docente, académico, matemático y político colombiano. Exalcalde de
+                    Medellín
+                    y exgobernador de Antioquia. Es matemático de la Universidad de los Andes, magíster y doctor en
+                    matemáticas y ciencias.
+                    de la Universidad de Wisconsin.
+                </p>
+                <a class="ico" target="_blank" href="/templates/fajardo.html"><img
+                        src="/img/Fajardo/Centro_esperanza.jpg" width="130"></a>
+                <br>
+                <input id="votar" class="btn btn-primary" type="button" value="Votar" onclick="javascrip:voto(3);">
+            </figure>
+            <br>
+            <br>
+            <div class="res">
+               <center><h4 class="parrafo-res" >acontinuación visualizara los resultados de las votaciones</h4></center>
+                 <input id="result" class="btn btn-primary" type="button" value="Ver resultados" onclick="javascrip:estadistica();">
+            </div>
+            
+            <div class="graf1">
+                <canvas id="grafica" width="400px" height="400px"></canvas>
+            </div>
+            <div class="graf2">
+                <canvas id="estadistica" width="400px" height="400px"></canvas>
+            </div>
+            <div id="final" witdh="500px">
+                <center><p id="presidente">Felicitaciones al nuevo presidente de Colombia</p>
+                    <canvas id="ganador" width="400px" height="400px"></canvas></center>
+            </div>
+
+
+
+
+            <script th:src="@{/js/grafica.js}"></script>
+        </section>
+    </main>
+    <footer>
+        <CENter><h3>TODOS LOS DERECHOS RESERVADOS </h3></CENter>
+    </footer>
+</body>
+
+</html>

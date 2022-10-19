@@ -1,0 +1,49 @@
+#tabla{
+    font-family: sans-serif;
+    color: graytext;
+    width: 1330px;
+    text-align: center;
+}
+#uno{
+    background: linear-gradient(rgba(1, 1, 1, 0.5), rgba(1, 0, 0, 0.3)), url("imagenes/Campesino.jpg");
+    background-size: cover;
+}
+#puno{
+    font-family: sans-serif;
+    font-size: 24px;
+    color: white;
+    text-align: left;
+    width: 700px;
+    height: 570px;
+    line-height: 2.2;
+    padding-top: 100px;
+    padding-right: 0px;
+    padding-left: 100px;
+}
+#pdos{
+    font-family: sans-serif;
+    font-size: 24px;
+    color: white;
+    text-align: left;
+    width: 700px;
+    height: 570px;
+    line-height: 2.2;
+    padding-top: 100px;
+    padding-right: 0px;
+    padding-left: 100px;
+}
+#dos{
+    background: linear-gradient(rgba(1, 1, 1, 0.5), rgba(1, 0, 0, 0.3)), url("imagenes/Campaña.jpg");
+    background-size: cover;
+}
+#fin{
+
+    font-family: sans-serif;
+    color: graytext;
+    text-align: center;
+    width: 1349px;
+    font-size: 19px;
+
+}
+
+
