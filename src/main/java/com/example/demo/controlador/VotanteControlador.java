@@ -19,5 +19,9 @@ public class VotanteControlador {
 		return "/Index";
 	}
 	
+	@GetMapping("/petro")
+	public String petro() {
+		return "/PetroCSS";
+	}
 	
 }
