@@ -5,7 +5,7 @@
     text-align: center;
 }
 #uno{
-    background: linear-gradient(rgba(1, 1, 1, 0.5), rgba(1, 0, 0, 0.3)), url("imagenes/Campesino.jpg");
+    background: linear-gradient(rgba(1, 1, 1, 0.5), rgba(1, 0, 0, 0.3)), url("/img/Campesino.jpg");
     background-size: cover;
 }
 #puno{
@@ -33,7 +33,7 @@
     padding-left: 100px;
 }
 #dos{
-    background: linear-gradient(rgba(1, 1, 1, 0.5), rgba(1, 0, 0, 0.3)), url("imagenes/Campaña.jpg");
+    background: linear-gradient(rgba(1, 1, 1, 0.5), rgba(1, 0, 0, 0.3)), url("/img/Campaña.jpg");
     background-size: cover;
 }
 #fin{
