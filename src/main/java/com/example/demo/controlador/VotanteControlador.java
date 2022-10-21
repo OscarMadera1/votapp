@@ -24,4 +24,8 @@ public class VotanteControlador {
 		return "/PetroCSS";
 	}
 	
+	@GetMapping("/hernandez")
+	public String rodolfo() {
+		return "/Hernandez";
+	}
 }
