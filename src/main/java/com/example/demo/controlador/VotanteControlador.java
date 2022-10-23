@@ -24,6 +24,8 @@ public class VotanteControlador {
 		return "/Index";
 	}
 	
+	/* link a candidatos */
+	
 	@GetMapping("/petro")
 	public String petro() {
 		return "/PetroCSS";
@@ -53,4 +55,20 @@ public class VotanteControlador {
 		return "redirect:/votapp";
 	}
 	
+	@GetMapping("/hernandez")
+	public String rodolfo() {
+		return "/Hernandez";
+		
+	}
+
+	
+	@GetMapping("/federico")
+	public String federico() {
+		return "/Federico";
+	}
+	
+	@GetMapping("/fajardo")
+	public String fajardo() {
+		return "/fajardo";
+	}
 }
