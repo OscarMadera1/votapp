@@ -1,0 +1,28 @@
+body{
+	width:90%;
+	margin:5px auto;
+	padding: 5px auto;
+	font-family: verdana;
+	font-size:14;
+}
+
+table{
+	width:auto;
+	margin:50px auto;	
+	padding: 5px auto;
+}
+
+td{
+	vertical-align: top;
+	text-align: center;
+}
+
+h5{
+	text-align: center;
+}
+
+#formula{
+	width:30%;
+	margin:5px auto;
+	padding: 5px auto;
+}

@@ -1,0 +1,47 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<head>
+	<title>Datos votantes</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/votanteStyle.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/bootstrap.min.css}">
+</head>
+
+<body>
+<br>
+<center><a th:href='@{/nuevoVotante}'><button type="button" class="btn btn-outline-secondary">Agregar votante</button></a></center>
+	<table border="1">
+		<tr>
+			<td></td>
+			<td align="center"><strong>Código</strong></td>
+			<td align="center"><strong>Identificación</strong></td>
+			<td align="center"><strong>Nombres</strong></td>
+			<td align="center"><strong>Apellidos</strong></td>
+			<td align="center"><strong>Fecha de nacimiento</strong></td>
+			<td align="center"><strong>Fecha de expedición</strong></td>
+			<td align="center"><strong>Lugar de nacimiento</strong></td>
+			<td align="center"><strong>Lugar de residencia</strong></td>
+			<td align="center"><strong>Móvil</strong></td>
+			<td align="center"><strong>Correo</strong></td>
+			<td align="center"><strong>Sexo</strong></td>
+			</tr>
+		<tr th:each="votante:${votante}">
+			<td></td>
+			<td><h5 th:text="${votante.codVotante}"></h5></td>
+			<td><font th:text="${votante.identificacion}"></font></td>
+			<td><font th:text="${votante.nombres}"></font></td>
+			<td><font th:text="${votante.apellidos}"></font></td>
+			<td><font th:text="${votante.fechaNac}"></font></td>
+			<td><font th:text="${votante.fechaExpCed}"></font></td>
+			<td><font th:text="${votante.lugarNac}"></font></td>
+			<td><font th:text="${votante.lugarRes}"></font></td>
+			<td><font th:text="${votante.movil}"></font></td>
+			<td><font th:text="${votante.correo}"></font></td>
+			<td><font th:text="${votante.sexo}"></font></td>
+			</tr>
+	</table>
+</body>
+</head>
