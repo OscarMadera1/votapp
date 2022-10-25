@@ -12,6 +12,8 @@
 
 <body>
 <br>
+<h3 align="center">Gestionar votante</h3>
+<br>
 <center><a th:href='@{/nuevoVotante}'><button type="button" class="btn btn-outline-secondary">Agregar votante</button></a></center>
 	<table border="1">
 		<tr>
@@ -29,7 +31,11 @@
 			<td align="center"><strong>Sexo</strong></td>
 			</tr>
 		<tr th:each="votante:${votante}">
-			<td></td>
+			<td>
+			<img th:src="@{/img/descargar.jpeg}" width="25px">
+			<a th:href="@{/editarVotante/}+${votante.codVotante}"> <img th:src="@{/img/editar.jpeg}" width="13px"></a>
+			<a th:href="@{/eliminarVotante/}+${votante.codVotante}"> <img th:src="@{/img/borrar.jpeg}" width="13px"></a>
+			</td>
 			<td><h5 th:text="${votante.codVotante}"></h5></td>
 			<td><font th:text="${votante.identificacion}"></font></td>
 			<td><font th:text="${votante.nombres}"></font></td>

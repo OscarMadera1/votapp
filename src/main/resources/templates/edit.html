@@ -13,59 +13,61 @@
 
 <body>
 	<div id="formula">
+	<h3>Editar votante</h3>
 		<form action="" th:action="@{/saveVotante}" method="post" th:object="${votante}">
 			<div class="mb-3">
 				<label for="txtIdentificacion" class="form-label">Identificación</label>
-				<input type="text" class="form-control" name="identificacion" id="identificacion" aria-describedby="IdentificacionHelp" required>
+				<input type="text" class="form-control" name="identificacion" id="identificacion" th:value="*{identificacion}" aria-describedby="IdentificacionHelp" required>
 				<div id="IdentificacionHelp" class="form-text">Digite el número de identificación.</div>
 			</div>
 			<div class="mb-3">
 				<label for="txtNombres" class="form-label">Nombres</label>
-				<input type="text" class="form-control" name="nombres" id="nombres" aria-describedby="NombresHelp" required>
+				<input type="text" class="form-control" name="nombres" id="nombres" th:value="*{nombres}" aria-describedby="NombresHelp" required>
 				<div id="NombresHelp" class="form-text">Digite los nombres.</div>
 			</div>
 			<div class="mb-3">
 				<label for="txtApellidos" class="form-label">Apellidos</label>
-				<input type="text" class="form-control" name="apellidos" id="apellidos" aria-describedby="ApellidosHelp" required>
+				<input type="text" class="form-control" name="apellidos" id="apellidos" th:value="*{apellidos}" aria-describedby="ApellidosHelp" required>
 				<div id="ApellidosHelp" class="form-text">Digite los Apellidos.</div>
 			</div>
 			<div class="mb-3">
 				<label for="txtFecNac" class="form-label">Fecha de nacimiento</label>
-				<input type="text" class="form-control" name="fechaNac" id="fechaNac" aria-describedby="FecNacHelp" required>
+				<input type="text" class="form-control" name="fechaNac" id="fechaNac" th:value="*{fechaNac}" aria-describedby="FecNacHelp" required>
 				<div id="FecNacHelp" class="form-text">Digite la fecha de nacimiento.</div>
 			</div>
 			<div class="mb-3">
 				<label for="txtFecExp" class="form-label">Fecha de expedición</label>
-				<input type="text" class="form-control" name="fechaExpCed" id="fechaExpCed" aria-describedby="FecExpHelp" required>
+				<input type="text" class="form-control" name="fechaExpCed" id="fechaExpCed" th:value="*{fechaExpCed}" aria-describedby="FecExpHelp" required>
 				<div id="FecExpHelp" class="form-text">Digite la fecha de expedición.</div>
 			</div>
 			<div class="mb-3">
 				<label for="txtLugNac" class="form-label">Lugar de nacimiento</label>
-				<input type="text" class="form-control" name="lugarNac" id="lugarNac" aria-describedby="LugNacHelp" required>
+				<input type="text" class="form-control" name="lugarNac" id="lugarNac" th:value="*{lugarNac}" aria-describedby="LugNacHelp" required>
 				<div id="LugNacHelp" class="form-text">Digite el lugar de nacimiento.</div>
 			</div>
 			<div class="mb-3">
 				<label for="txtLugRec" class="form-label">Lugar de residencia</label>
-				<input type="text" class="form-control" name="lugarRes" id="lugarRes" aria-describedby="LugRecHelp" required>
+				<input type="text" class="form-control" name="lugarRes" id="lugarRes" th:value="*{lugarRes}" aria-describedby="LugRecHelp" required>
 				<div id="LugRecHelp" class="form-text">Digite el lugar de residencia.</div>
 			</div>
 			<div class="mb-3">
 				<label for="txtMovil" class="form-label">Móvil</label>
-				<input type="text" class="form-control" name="movil" id="movil" aria-describedby="MovilHelp" required>
+				<input type="text" class="form-control" name="movil" id="movil" th:value="*{movil}" aria-describedby="MovilHelp" required>
 				<div id="MovilHelp" class="form-text">Digite el número móvil.</div>
 			</div>
 			<div class="mb-3">
 				<label for="txtCorreo" class="form-label">Correo</label>
-				<input type="text" class="form-control" name="correo" id="correo" aria-describedby="CorreoHelp" required>
+				<input type="text" class="form-control" name="correo" id="correo" th:value="*{correo}" aria-describedby="CorreoHelp" required>
 				<div id="CorreoHelp" class="form-text">Digite el correo.</div>
 			</div>
 			<div class="mb-3">
 				<label for="txtSexo" class="form-label">Sexo</label>
-				<input type="text" class="form-control" name="sexo" id="sexo" aria-describedby="SexoHelp" required>
+				<input type="text" class="form-control" name="sexo" id="sexo" th:value="*{sexo}" aria-describedby="SexoHelp" required>
 				<div id="SexoHelp" class="form-text">Digite el sexo.</div>
 			</div>			
 			
-			<button type="submit" class="btn btn-primary">Guardar</button>
+			<button type="submit" class="btn btn-primary">Modificar</button>
+			<input type="hidden" th:value="*{codVotante}" name="codVotante" id="codVotante">
 		</form>
 	</div>
 </body>
