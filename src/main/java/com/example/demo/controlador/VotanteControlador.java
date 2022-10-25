@@ -8,6 +8,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import com.example.demo.entidades.Votante;
@@ -29,6 +30,23 @@ public class VotanteControlador {
 	@GetMapping("/petro")
 	public String petro() {
 		return "/PetroCSS";
+	}
+	
+	@GetMapping("/hernandez")
+	public String rodolfo() {
+		return "/Hernandez";
+		
+	}
+
+	
+	@GetMapping("/federico")
+	public String federico() {
+		return "/Federico";
+	}
+	
+	@GetMapping("/fajardo")
+	public String fajardo() {
+		return "/fajardo";
 	}
 
 	@GetMapping("/votante")
@@ -52,23 +70,13 @@ public class VotanteControlador {
 	public String addVotante(@Validated Votante votante) {
 		System.out.println("Votante-->"+votante.toString());
 		votanteService.save(votante);
-		return "redirect:/votapp";
+		return "redirect:/addVotante";
 	}
 	
-	@GetMapping("/hernandez")
-	public String rodolfo() {
-		return "/Hernandez";
-		
-	}
-
-	
-	@GetMapping("/federico")
-	public String federico() {
-		return "/Federico";
+	@GetMapping("/eliminarVotante/{codVotante}")
+	public String Eliminar(@PathVariable int codVotante) {
+		votanteService.deleteById(codVotante);
+		return "redirect/indexVot";
 	}
 	
-	@GetMapping("/fajardo")
-	public String fajardo() {
-		return "/fajardo";
-	}
 }

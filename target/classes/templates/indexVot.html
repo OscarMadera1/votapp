@@ -12,24 +12,29 @@
 
 <body>
 <br>
+<center><h3>Gestionar votantes</h3></center><br>
 <center><a th:href='@{/nuevoVotante}'><button type="button" class="btn btn-outline-secondary">Agregar votante</button></a></center>
 	<table border="1">
 		<tr>
 			<td></td>
-			<td align="center"><strong>Código</strong></td>
-			<td align="center"><strong>Identificación</strong></td>
-			<td align="center"><strong>Nombres</strong></td>
-			<td align="center"><strong>Apellidos</strong></td>
-			<td align="center"><strong>Fecha de nacimiento</strong></td>
-			<td align="center"><strong>Fecha de expedición</strong></td>
-			<td align="center"><strong>Lugar de nacimiento</strong></td>
-			<td align="center"><strong>Lugar de residencia</strong></td>
-			<td align="center"><strong>Móvil</strong></td>
-			<td align="center"><strong>Correo</strong></td>
-			<td align="center"><strong>Sexo</strong></td>
+			<td align="center"><strong>Código &nbsp;  </strong></td>
+			<td align="center"><strong>Identificación &nbsp; </strong></td>
+			<td align="center"><strong>Nombres &nbsp;  </strong></td>
+			<td align="center"><strong>Apellidos &nbsp;  </strong></td>
+			<td align="center"><strong>Fecha de nacimiento &nbsp;  </strong></td>
+			<td align="center"><strong>Fecha de expedición &nbsp;  </strong></td>
+			<td align="center"><strong>Lugar de nacimiento &nbsp;  </strong></td>
+			<td align="center"><strong>Lugar de residencia &nbsp;  </strong></td>
+			<td align="center"><strong>Móvil &nbsp;</strong></td>
+			<td align="center"><strong>Correo &nbsp;</strong></td>
+			<td align="center"><strong>Sexo &nbsp;</strong></td>
 			</tr>
 		<tr th:each="votante:${votante}">
-			<td></td>
+			<td>
+			<a th:href="@{/mostrarvotante/}+${votante.codVotante}"><img src="/img/mostrar.png" width="20px"></a>
+			<a th:href="@{/editarvotante/}+${votante.codVotante}"><img src="/img/editar.png" width="20px"></a>
+			<a th:href="@{/eliminarVotante/}+${votante.codVotante}"><img src="/img/eliminar.png" width="20px"></a>
+			</td>
 			<td><h5 th:text="${votante.codVotante}"></h5></td>
 			<td><font th:text="${votante.identificacion}"></font></td>
 			<td><font th:text="${votante.nombres}"></font></td>
