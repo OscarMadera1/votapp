@@ -39,6 +39,9 @@
     #ganador {
         width: 400px;
     }
+    #btnreg{
+	margin-left: 10%;
+}
 </style>
 
 <body>
@@ -77,8 +80,12 @@
                     sufragio para las elecciones presidenciales nacionales del año 2022.
                 </font>
             </p>
-            <a class="ico" th:href="@{/votante}" target="_blank"><input class="btn btn-primary" type="button" value="Gestionar votantes"><a/>
-        </div>
+           </div>
+           <div class="registro">
+           <p class="preg">Para que su voto cuente por favor regístrese</p>
+           <a class="ico" th:href="@{/votante}" target="_blank"><input id="btnreg" class="btn btn-primary" type="button" value="Registrarse"><a/>
+           </div>
+           
         <section class="can-1">
             <br>
             <br>

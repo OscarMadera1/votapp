@@ -50,22 +50,6 @@ public class VotanteControlador {
 		return "/fajardo";
 	}
 
-	@GetMapping("/hernandez")
-	public String rodolfo() {
-		return "/Hernandez";
-	}
-
-	
-	@GetMapping("/federico")
-	public String federico() {
-		return "/Federico";
-	}
-	
-	@GetMapping("/fajardo")
-	public String fajardo() {
-		return "/fajardo";
-	}
-
 	@GetMapping("/votante")
 	public String votante(Model model) {
 		try {
@@ -87,7 +71,7 @@ public class VotanteControlador {
 	public String addVotante(@Validated Votante votante) {
 		System.out.println("Votante-->"+votante.toString());
 		votanteService.save(votante);
-<<<<<<< HEAD
+
 		return "redirect:/votante";
 	}
 
@@ -98,20 +82,19 @@ public class VotanteControlador {
 		return "/edit";
 	}
 
-	@GetMapping("/eliminarVotante/{id}")
-	public String eliminar (@PathVariable int id) {
-		votanteService.deleteById(id);
-		return "redirect:/votante";
-	}	
-=======
-		return "redirect:/addVotante";
-	}
-	
+
 	@GetMapping("/eliminarVotante/{codVotante}")
 	public String Eliminar(@PathVariable int codVotante) {
 		votanteService.deleteById(codVotante);
-		return "redirect/indexVot";
+		return "redirect:/votante";
 	}
 	
->>>>>>> main
+	@GetMapping("/mostrarVotante/{id}")
+	public String Mostrar(@PathVariable int id, Model model) {
+		Optional<Votante> votante = votanteService.findById(id);
+		model.addAttribute("votante", votante.get());
+		return "/mostrar";
+	}
+	
+
 }
