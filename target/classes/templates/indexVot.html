@@ -12,7 +12,12 @@
 
 <body>
 <br>
+<<<<<<< HEAD
+<h3 align="center">Gestionar votante</h3>
+<br>
+=======
 <center><h3>Gestionar votantes</h3></center><br>
+>>>>>>> main
 <center><a th:href='@{/nuevoVotante}'><button type="button" class="btn btn-outline-secondary">Agregar votante</button></a></center>
 	<table border="1">
 		<tr>
@@ -31,9 +36,15 @@
 			</tr>
 		<tr th:each="votante:${votante}">
 			<td>
+<<<<<<< HEAD
+			<img th:src="@{/img/descargar.jpeg}" width="25px">
+			<a th:href="@{/editarVotante/}+${votante.codVotante}"> <img th:src="@{/img/editar.jpeg}" width="13px"></a>
+			<a th:href="@{/eliminarVotante/}+${votante.codVotante}"> <img th:src="@{/img/borrar.jpeg}" width="13px"></a>
+=======
 			<a th:href="@{/mostrarvotante/}+${votante.codVotante}"><img src="/img/mostrar.png" width="20px"></a>
 			<a th:href="@{/editarvotante/}+${votante.codVotante}"><img src="/img/editar.png" width="20px"></a>
 			<a th:href="@{/eliminarVotante/}+${votante.codVotante}"><img src="/img/eliminar.png" width="20px"></a>
+>>>>>>> main
 			</td>
 			<td><h5 th:text="${votante.codVotante}"></h5></td>
 			<td><font th:text="${votante.identificacion}"></font></td>

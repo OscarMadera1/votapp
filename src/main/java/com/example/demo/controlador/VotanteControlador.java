@@ -2,6 +2,7 @@ package com.example.demo.controlador;
 
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -49,6 +50,22 @@ public class VotanteControlador {
 		return "/fajardo";
 	}
 
+	@GetMapping("/hernandez")
+	public String rodolfo() {
+		return "/Hernandez";
+	}
+
+	
+	@GetMapping("/federico")
+	public String federico() {
+		return "/Federico";
+	}
+	
+	@GetMapping("/fajardo")
+	public String fajardo() {
+		return "/fajardo";
+	}
+
 	@GetMapping("/votante")
 	public String votante(Model model) {
 		try {
@@ -70,6 +87,23 @@ public class VotanteControlador {
 	public String addVotante(@Validated Votante votante) {
 		System.out.println("Votante-->"+votante.toString());
 		votanteService.save(votante);
+<<<<<<< HEAD
+		return "redirect:/votante";
+	}
+
+	@GetMapping("/editarVotante/{id}")
+	public String Editar(@PathVariable int id, Model model) {
+		Optional<Votante> votante=votanteService.findById(id);
+		model.addAttribute("votante", votante.get());
+		return "/edit";
+	}
+
+	@GetMapping("/eliminarVotante/{id}")
+	public String eliminar (@PathVariable int id) {
+		votanteService.deleteById(id);
+		return "redirect:/votante";
+	}	
+=======
 		return "redirect:/addVotante";
 	}
 	
@@ -79,4 +113,5 @@ public class VotanteControlador {
 		return "redirect/indexVot";
 	}
 	
+>>>>>>> main
 }
