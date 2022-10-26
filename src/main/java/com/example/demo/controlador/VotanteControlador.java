@@ -32,6 +32,23 @@ public class VotanteControlador {
 	public String petro() {
 		return "/PetroCSS";
 	}
+	
+	@GetMapping("/hernandez")
+	public String rodolfo() {
+		return "/Hernandez";
+		
+	}
+
+	
+	@GetMapping("/federico")
+	public String federico() {
+		return "/Federico";
+	}
+	
+	@GetMapping("/fajardo")
+	public String fajardo() {
+		return "/fajardo";
+	}
 
 	@GetMapping("/hernandez")
 	public String rodolfo() {
@@ -70,6 +87,7 @@ public class VotanteControlador {
 	public String addVotante(@Validated Votante votante) {
 		System.out.println("Votante-->"+votante.toString());
 		votanteService.save(votante);
+<<<<<<< HEAD
 		return "redirect:/votante";
 	}
 
@@ -85,4 +103,15 @@ public class VotanteControlador {
 		votanteService.deleteById(id);
 		return "redirect:/votante";
 	}	
+=======
+		return "redirect:/addVotante";
+	}
+	
+	@GetMapping("/eliminarVotante/{codVotante}")
+	public String Eliminar(@PathVariable int codVotante) {
+		votanteService.deleteById(codVotante);
+		return "redirect/indexVot";
+	}
+	
+>>>>>>> main
 }
